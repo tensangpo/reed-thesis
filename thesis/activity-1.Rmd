@@ -351,3 +351,8 @@ dis.bs <- cpt.meanvar(discoveries, test.stat = "Poisson", method = "BinSeg")
 cpts.ts(dis.bs)
 
 ```
+
+
+2. 
+Bidirectional Recurrent Neural Network codes for daily temperature prediction:
+
