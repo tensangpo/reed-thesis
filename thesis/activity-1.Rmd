@@ -354,5 +354,41 @@ cpts.ts(dis.bs)
 
 
 2. 
-Bidirectional Recurrent Neural Network codes for daily temperature prediction:
+Bidirectional Recurrent Neural Network codes for daily temperature prediction. The weather timeseries dataset recorded every 10 minutes, over several years at the Weather Station at the Max Planck Institute for Biogeochemistry in Jena, Germany. Here we build a model that takes as input some data from the recent past (a few days’ worth of data points) and predicts the air temperature 24 hours in the future.
+```{r}
+# Here we download, uncompress and plot the data:
+
+dir.create("~/Downloads/jena_climate", recursive = TRUE)
+download.file(
+  "https://s3.amazonaws.com/keras-datasets/jena_climate_2009_2016.csv.zip",
+  "~/Downloads/jena_climate/jena_climate_2009_2016.csv.zip"
+)
+unzip(
+  "~/Downloads/jena_climate/jena_climate_2009_2016.csv.zip",
+  exdir = "~/Downloads/jena_climate"
+)
+
+library(tibble)
+library(readr)
+
+data_dir <- "~/Downloads/jena_climate"
+fname <- file.path(data_dir, "jena_climate_2009_2016.csv")
+data <- read_csv(fname)
+
+#glimpse(data)
+
+library(ggplot2)
+ggplot(data, aes(x = 1:nrow(data), y = `T (degC)`)) + geom_line()
+
+```
+
+```{r}
+# For the first 10 days of temperature data, because the data is recorded 
+# every 10 minutes, we get 144 data points per day.
+
+ggplot(data[1:1440,], aes(x = 1:1440, y = `T (degC)`)) + geom_line()
+```
+
+
+
 
