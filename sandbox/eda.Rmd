@@ -5,26 +5,12 @@ date: "10/3/2019"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+The NSRDB 1991–2005 update is a serially complete collection of hourly values of the three most common measurements of solar radiation (i.e., global horizontal, direct normal, and diffuse horizontal) over a period of time adequate to establish means and extremes and at a sufficient number or locations to represent regional solar radiation climates. Nearly all of the solar data in the NSRDB are modeled, and only 40 sites have measured solar data — none of them with a complete period of record.
+
+
+The manual for this data set can be obtained from the following extension:
+https://www1.ncdc.noaa.gov/pub/data/nsrdb-solar/documentation-2010/NSRDB_UserManual_r20120906.pdf
+
+
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
