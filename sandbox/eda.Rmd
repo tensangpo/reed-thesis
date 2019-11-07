@@ -5,7 +5,11 @@ date: "10/3/2019"
 output: html_document
 ---
 
-The NSRDB 1991–2005 update is a serially complete collection of hourly values of the three most common measurements of solar radiation (i.e., global horizontal, direct normal, and diffuse horizontal) over a period of time adequate to establish means and extremes and at a sufficient number or locations to represent regional solar radiation climates. Nearly all of the solar data in the NSRDB are modeled, and only 40 sites have measured solar data — none of them with a complete period of record.
+The NSRDB 1991–2010 update is a serially complete collection of hourly values of the three most common measurements of solar radiation, i.e. Global Horizontal (GHI), Direct Normal (DNI), and Diffuse Horizontal Irradiance (DNI), over a period of time adequate to establish means and extremes and at a sufficient number or locations to represent regional solar radiation climates. Nearly all of the solar data in the NSRDB are modeled, and only 40 sites have measured solar data — none of them with a complete period of record. 
+
+The SUNY model produces estimates of global and direct irradiance at hourly intervals on the 10-km grid for all 50 states, excluding Alaska above 60° north latitude and west of 160° west longitude, where the geostationary satellites cannot resolve cloud cover with necessary detail. SUNY model diffuse values were derived from the global and direct irradiance values for each grid cell as the difference between the global and vertical component of the direct.The directory structure that is divided into 2X2 degree tiles. Thus with 8-year files, there are 400 files in each subdirectory.  For yearly files, there are 400X8 = 3200 files.  So for example, directory 10640 has all files from -106 to -104 long, 40.0 to 42.0 lat. Within this will be a file such as dir_glo_105454105.csv, with 8 years of data from location 105.45 deg W, 41.05 degrees N. There are 436 of these subdirectories.
+
+The solar radiation that passes through directly to the earth’s surface is called Direct Normal Irradiance (DNI). The radiation that has been scattered out of the direct beam is called Diffuse Horizontal Irradiance (DHI). The direct component of sunlight and the diffuse component of skylight falling together on a horizontal surface make up Global Horizontal Irradiance (GHI). 
 
 
 The manual for this data set can be obtained from the following extension:
