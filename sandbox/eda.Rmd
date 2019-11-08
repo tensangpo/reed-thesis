@@ -155,13 +155,29 @@ The broadband optical depth per unit of airmass due to extinction by the aerosol
 *Aerosol optical depth flag//
 Section 2.2.1.2.National Solar Radiation Database 1991–2010 Update: User’s Manual
 
+
+
+IV. Priliminary visualizations (Time vs. Radiation).
+
+```{r}
+library(readr)
+library("dplyr") 
+
+X726980_1991 <- read_csv('/home/tensangpo/reed-thesis/Data/726980/726980_1991.csv')
+X726980_1991 <- X726980_1991 %>% mutate(Time = row_number())
+
+
+View(X726980_1991)
+
 ```
+
+The intent of the modeled data is to present hourly solar radiation values that, in the aggregate, possess statistical properties (e.g., means, standard deviations, and cumulative frequency distributions) that are as close as possible to the statistical properties of measured solar data over the period of a month or year. These data do not represent each specific hourly value of solar radiation to the same or equivalent accuracy as the long-term statistics. 
 
 ```{r}
 
+Y <- 'Dir Mod (W/m^2)'
 
-
-
+ggplot(data = X726980_1991, mapping = aes(x = Time, y = Y)) + geom_line() + geom_point() + xlab("Time (Hour)") + ylab("Modeled Direct Normal (W/m^2)") + ggtitle("Solar Radiation in 1991")
 
 ```
 
