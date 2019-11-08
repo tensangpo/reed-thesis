@@ -2,7 +2,9 @@
 title: "Exploratory Data Analysis - Data Visualization"
 author: "Tenzin"
 date: "10/3/2019"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 I. Where is the Data from?
@@ -161,13 +163,14 @@ IV. Priliminary visualizations (Time vs. Radiation).
 
 ```{r}
 library(readr)
+library(tidyverse)
 library("dplyr") 
 
 X726980_1991 <- read_csv('/home/tensangpo/reed-thesis/Data/726980/726980_1991.csv')
 X726980_1991 <- X726980_1991 %>% mutate(Time = row_number())
 
 
-View(X726980_1991)
+# View(X726980_1991)
 
 ```
 
